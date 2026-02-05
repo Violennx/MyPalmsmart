@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Warna default Anda -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="design_default_color_primary">#008577</color>
+    <color name="design_default_color_primary_dark">#00574B</color>
+    <color name="design_default_color_accent">#D81B60</color>
+
+    <!-- Warna untuk Status Laporan -->
+    <color name="status_diterima">#E8F5E9</color>
+    <color name="status_diterima_text">#1B5E20</color>
+    <color name="status_ditolak">#FFEBEE</color>
+    <color name="status_ditolak_text">#B71C1C</color>
+    <color name="status_pending">#FFFFFF</color>
+    <color name="status_pending_text">#616161</color>
+
+    <!-- Warna Tema Standar (dari error sebelumnya) -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+    <!--
+    =========================================================================
+    ✅ TAMBAHKAN KODE WARNA BARU YANG MENYEBABKAN ERROR DI SINI
+    =========================================================================
+    -->
+    <color name="background_light">#F5F5F5</color> <!-- Contoh warna abu-abu muda -->
+    <color name="primary">#15931b</color> <!-- Contoh warna hijau primer -->
+
+</resources>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+=============================================================================
+===          FILE item_laporan.xml - Desain Untuk Satu Baris Laporan        ===
+=== (Layout ini digunakan oleh RecyclerView di MandorActivity & KraniActivity) ===
+=============================================================================
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <!-- Nama Pemanen -->
+        <TextView
+            android:id="@+id/tvItemNamaPemanen"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tvItemStatus"
+            android:layout_marginEnd="8dp"
+            tools:text="Nama Pemanen Panjang Sekali" />
+
+        <!-- Area Blok -->
+        <TextView
+            android:id="@+id/tvItemAreaBlok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_baseline_location_on_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemNamaPemanen"
+            tools:text="Area Blok C1" />
+
+        <!-- Jumlah Tandan -->
+        <TextView
+            android:id="@+id/tvItemJumlahTandan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:drawableStart="@drawable/ic_baseline_format_list_numbered_24"
+            android:drawablePadding="4dp"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvItemAreaBlok"
+            tools:text="150 Tandan" />
+
+        <!-- Status Laporan (Diterima, Ditolak, Menunggu) -->
+        <TextView
+            android:id="@+id/tvItemStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:paddingEnd="12dp"
+            android:paddingBottom="6dp"
+            android:textColor="@android:color/white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@drawable/status_background_menunggu"
+            tools:text="Menunggu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

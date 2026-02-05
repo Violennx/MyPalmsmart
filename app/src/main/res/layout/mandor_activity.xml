@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".MandorActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvNamaMandorLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Mandor"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvInfoTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="Tanggal Hari Ini"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Laporan Terakhir Masuk"
+            android:textColor="@color/design_default_color_primary"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- ================== BAGIAN YANG PERLU DIPERBAIKI ADA DI SINI ================== -->
+        <!-- Card untuk menampilkan laporan terakhir -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <!-- Status di pojok kanan atas -->
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:paddingStart="12dp"
+                    android:paddingTop="6dp"
+                    android:paddingEnd="12dp"
+                    android:paddingBottom="6dp"
+                    android:textColor="@android:color/white"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    tools:background="@drawable/status_background_menunggu"
+                    tools:text="Menunggu" />
+
+
+                <!-- Nama Pemanen -->
+                <TextView
+                    android:id="@+id/tvNamaPekerja"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_toStartOf="@id/tvStatus"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    tools:text="Nama Pemanen" />
+
+                <!-- Tanggal Laporan -->
+                <TextView
+                    android:id="@+id/tvTanggalLaporan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvNamaPekerja"
+                    android:layout_marginTop="4dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    tools:text="25/12/2024" />
+
+                <!-- Jobdesk -->
+                <TextView
+                    android:id="@+id/tvJobdesk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvTanggalLaporan"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    tools:text="Pemanen" />
+
+                <!-- Jumlah Tandan -->
+                <TextView
+                    android:id="@+id/tvJumlahTandan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvJobdesk"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/design_default_color_primary_dark"
+                    android:textStyle="bold"
+                    tools:text="150 Tandan" />
+
+                <!-- Area Blok -->
+                <TextView
+                    android:id="@+id/tvAreaBlok"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvJumlahTandan"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    tools:text="Blok A5" />
+
+                <!-- Mandor -->
+                <TextView
+                    android:id="@+id/tvMandor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvAreaBlok"
+                    android:layout_marginTop="8dp"
+                    android:drawablePadding="8dp"
+                    android:gravity="center_vertical"
+                    tools:text="Mandor Rafli" />
+
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <!-- ============================================================================ -->
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Daftar Semua Laporan"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLaporan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_laporan_mandor" />
+
+    </LinearLayout>
+</ScrollView>

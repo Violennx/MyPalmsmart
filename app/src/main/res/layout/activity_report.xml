@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    tools:context=".ReportActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Buat Laporan Panen"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Laporan"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCurrentDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp"
+            tools:text="25/12/2024" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nama Pemanen"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Masukkan nama lengkap"
+            android:inputType="textPersonName"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Jumlah Tandan (JJG)"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etJumlahTandan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contoh: 150"
+            android:inputType="number"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Area Blok"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/etAreaBlok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contoh: A5, B12"
+            android:inputType="text"
+            android:background="@drawable/edit_text_background"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Mandor"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerMandor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/mandor_array"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pilih Jobdesk"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/spinnerJobdesk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/jobdesk_array"
+            android:padding="12dp"
+            android:background="@drawable/edit_text_background"
+            android:layout_marginBottom="24dp" />
+
+        <Button
+            android:id="@+id/btnSubmitLaporan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kirim Laporan"
+            android:backgroundTint="#15931b"
+            android:textColor="@android:color/white"
+            android:padding="14dp"/>
+
+    </LinearLayout>
+</ScrollView>

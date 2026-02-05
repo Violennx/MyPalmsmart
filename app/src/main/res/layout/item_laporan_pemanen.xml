@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/rounded_corner_background_generic"> <!-- Contoh background -->
+
+    <TextView
+        android:id="@+id/tvNamaPemanenItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pemanen"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+    <TextView
+        android:id="@+id/tvJumlahTandanItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Tandan: 0"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvJobdeskItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jobdesk: Panen"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvAreaBlokItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area Blok: A1"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvMandorItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mandor: Budi"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvTanggalItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal: 2025-10-04"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"/>
+
+    <TextView
+        android:id="@+id/tvStatusItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status: Pending"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_blue_dark"/>
+    <!-- Tambahkan TextView lain jika perlu, misal untuk tanggal -->
+    <!--
+    <TextView
+        android:id="@+id/tvTanggalLaporanItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Laporan"
+        android:textSize="12sp"/>
+    -->
+</LinearLayout>

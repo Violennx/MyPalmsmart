@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyPalmSmart</string>
+    <string-array name="filter_waktu_options">
+        <item>Hari Ini</item>
+        <item>Minggu Terakhir</item>
+        <item>Bulan Terakhir</item>
+    </string-array>
+</resources>
+

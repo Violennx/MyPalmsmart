@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Warna latar belakang abu-abu muda untuk memberikan kesan nonaktif -->
+    <solid android:color="#E0E0E0" />
+
+    <!-- Sudut yang sedikit membulat, sama seperti input field yang aktif -->
+    <corners android:radius="8dp" />
+
+    <!-- Garis tepi (border) dengan warna yang sedikit lebih gelap -->
+    <stroke android:width="1dp" android:color="#BDBDBD" />
+</shape>

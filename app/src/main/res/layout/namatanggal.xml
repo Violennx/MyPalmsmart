@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_light"
+    android:padding="16dp"
+    tools:context=".PerformanceActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvPerformanceTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Detail Performa Panen Terakhir"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="24dp"/>
+
+        <GridLayout
+            android:id="@+id/gridLayoutPerformance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:background="@drawable/rounded_corner_background"
+            android:layout_marginBottom="16dp">
+
+            <!-- Akan diisi nanti -->
+
+            <!-- Baris 1: Nama Pekerja -->
+            <TextView
+                android:text="Nama Pekerja:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfNamaPekerja"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Baris 2: Tanggal -->
+            <TextView
+                android:text="Tanggal:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfTanggalLaporan"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- baris 3 jobdesk -->
+            <TextView
+                android:text="Jobdesk:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfJobdeskDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Baris 4 Jumlah tandan -->
+
+            <TextView
+                android:text="Jumlah Tandan:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfJumlahTandanDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Baris 5 Area Blok -->
+
+            <TextView
+                android:text="Area Blok:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfAreaBlokDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+
+            <!-- Baris 6 Mandor -->
+
+            <TextView
+                android:text="Mandor:"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp"/>
+            <TextView
+                android:id="@+id/tvPerfMandorDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_columnWeight="1"
+                android:layout_gravity="fill_horizontal|center_vertical"
+                android:textSize="16sp"/>
+
+
+
+
+        </GridLayout>
+
+
+
+        <Spinner
+            android:id="@+id/spinnerFilterWaktu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:entries="@array/filter_waktu_options"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:id="@+id/chartPerforma"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:background="@android:color/white"
+            />
+
+        <Button
+            android:id="@+id/btnKembaliKeHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembali ke Beranda"
+            android:backgroundTint="@color/primary"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="24dp"/>
+
+        <Button
+            android:id="@+id/btnExportCSV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ekspor CSV"/>
+
+
+
+    </LinearLayout>
+</ScrollView>

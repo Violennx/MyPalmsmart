@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Daftar untuk Spinner Mandor -->
+    <string-array name="mandor_array">
+        <item>M. Rafli Ardiyaksa. R</item>
+        <item>Sajidur Rahman Toyib</item>
+        <item>Muhammad</item>
+        <item>Rozha Ramadhan R</item>
+    </string-array>
+
+    <!-- Daftar untuk Spinner Jobdesk -->
+    <string-array name="jobdesk_array">
+        <item>Pemanen</item>
+        <item>Perawatan</item>
+        <item>Lainnya</item>
+    </string-array>
+</resources>

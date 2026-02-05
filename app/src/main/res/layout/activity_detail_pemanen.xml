@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+========================================================================
+===     FILE activity_detail_pemanen.xml - Layout Halaman Verifikasi   ===
+========================================================================
+-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#f6f8f6"
+    tools:context=".DetailPemanenActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Detail Laporan Pemanen"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#112112"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- ID Laporan (Disembunyikan, untuk keperluan teknis) -->
+    <TextView
+        android:id="@+id/tvIdLaporan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        tools:text="101"/>
+
+    <!-- Nama Pemanen -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Pemanen"
+        android:textSize="12sp"
+        android:textColor="#777777"/>
+    <TextView
+        android:id="@+id/tvNamaPemanenDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#112112"
+        android:layout_marginBottom="16dp"
+        tools:text="Nama Pemanen"/>
+
+    <!-- Tanggal -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tanggal Laporan"
+        android:textSize="12sp"
+        android:textColor="#777777"/>
+    <TextView
+        android:id="@+id/tvTanggalDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#112112"
+        android:layout_marginBottom="16dp"
+        tools:text="01 Januari 2024"/>
+
+    <!-- Jumlah Tandan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jumlah Tandan"
+        android:textSize="12sp"
+        android:textColor="#777777"/>
+    <TextView
+        android:id="@+id/tvJumlahTandanDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#112112"
+        android:layout_marginBottom="16dp"
+        tools:text="150 Tandan"/>
+
+    <!-- Area Blok -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area / Blok"
+        android:textSize="12sp"
+        android:textColor="#777777"/>
+    <TextView
+        android:id="@+id/tvAreaBlokDetail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#112112"
+        android:layout_marginBottom="16dp"
+        tools:text="Blok C-12"/>
+
+    <!-- Status Saat Ini -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status Laporan"
+        android:textSize="12sp"
+        android:textColor="#777777"/>
+    <TextView
+        android:id="@+id/tvStatusDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="12dp"
+        android:paddingEnd="12dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:textSize="14sp"
+        android:textColor="@android:color/white"
+        tools:background="@drawable/status_background_menunggu"
+        tools:text="Menunggu"/>
+
+    <!-- Spacer untuk mendorong tombol ke bawah -->
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Tombol Aksi Verifikasi -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnTolak"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Tolak"
+            android:backgroundTint="#D32F2F"
+            android:textColor="@android:color/white"
+            android:layout_marginEnd="8dp"/>
+
+        <Button
+            android:id="@+id/btnTerima"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Terima"
+            android:backgroundTint="#388E3C"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
+
+</LinearLayout>

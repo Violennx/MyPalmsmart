@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Izin yang dibutuhkan untuk koneksi internet (login) -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!--
+    Izin yang dibutuhkan untuk menyimpan file CSV.
+    android:maxSdkVersion="28" berarti izin ini hanya diminta untuk Android 9 (Pie) ke bawah.
+    Untuk Android 10 ke atas, izin ini tidak lagi diperlukan jika menyimpan ke direktori spesifik aplikasi.
+    -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyPalmSmart"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+
+        <!-- Activity Utama (Layar Login) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activity Halaman Pemanen -->
+        <activity
+            android:name=".HomeActivity"
+            android:exported="false"
+            android:label="Halaman Pemanen" />
+
+        <!-- Activity Halaman Lapor -->
+        <activity
+            android:name=".ReportActivity"
+            android:exported="false"
+            android:label="Buat Laporan"
+            android:parentActivityName=".HomeActivity" />
+
+        <!-- Activity Halaman Mandor -->
+        <activity
+            android:name=".MandorActivity"
+            android:exported="false"
+            android:label="Halaman Mandor" />
+
+        <!-- Activity Halaman Krani -->
+        <activity
+            android:name=".KraniActivity"
+            android:exported="false"
+            android:label="Halaman Krani" />
+
+        <!-- Activity Halaman Performa -->
+        <activity
+            android:name=".PerformanceActivity"
+            android:exported="false"
+            android:label="Performa Panen"
+            android:parentActivityName=".HomeActivity" />
+
+        <!-- ================================================================ -->
+        <!-- ACTIVITY YANG SEBELUMNYA MENYEBABKAN FORCE CLOSE KITA DAFTARKAN DI SINI -->
+        <!-- ================================================================ -->
+
+        <!-- Activity Halaman Detail Laporan (untuk Terima/Tolak) -->
+        <activity
+            android:name=".DetailPemanenActivity"
+            android:exported="false"
+            android:label="Detail Laporan"
+            android:parentActivityName=".KraniActivity" />
+
+        <!-- Activity Halaman Edit Laporan (sebagai 'sinyal' update) -->
+        <activity
+            android:name=".EditLaporanActivity"
+            android:exported="false"
+            android:label="Edit Laporan" />
+
+        <activity
+            android:name=".ProfileActivity"
+            android:exported="false"
+            android:label="Profil Pengguna"
+            android:parentActivityName=".HomeActivity" />
+
+
+    </application>
+
+</manifest>

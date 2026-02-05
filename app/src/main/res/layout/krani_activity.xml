@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#f6f8f6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".KraniActivity">
+
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:text="Team Overview"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#112112"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <TextView
+            android:text="Krani Panen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#15931b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tvNamaKraniLogin"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            tools:text="Nama Krani dari Login" />
+
+        <TextView
+            android:id="@+id/tvInfoTanggal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            tools:text="DD MMMM YYYY"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:text="Anggota Tim"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#15931b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Card: Rafli -->
+        <LinearLayout
+            android:id="@+id/cardRafli"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:onClick="onCardRafliClicked">
+            <TextView
+                android:text="M. Rafli Ardiyaksa. R"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Mandor"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Card: Sajidur -->
+        <LinearLayout
+            android:id="@+id/cardSajidur"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:onClick="onCardSajidurClicked">
+            <TextView
+                android:text="Sajidur Rahman Toyib"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Mandor"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Card: Rozha -->
+        <LinearLayout
+            android:id="@+id/cardRozha"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp"
+            android:onClick="onCardRozhaClicked">
+            <TextView
+                android:text="Muhammad Rozha Ramadhan R"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:text="Mandor"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Semua Laporan Pemanen Hari Ini"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#15931b"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="8dp"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewLaporanKrani"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginTop="8dp"
+            tools:listitem="@layout/item_laporan" />
+
+
+
+        <!-- ================== BAGIAN YANG DIPERBARUI ================== -->
+        <!-- Tombol Navigasi Bawah -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:layout_marginTop="24dp"
+            android:background="#ffffff"
+            android:padding="8dp"
+            android:elevation="4dp">
+
+            <!-- Tombol BARU untuk Export Laporan Diterima -->
+            <Button
+                android:id="@+id/btnExportDiterima"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:backgroundTint="#008000"
+                android:text="Export Diterima (CSV)"
+                android:textColor="#ffffff"
+                android:textSize="12sp"
+                android:layout_marginEnd="8dp"/>
+
+        </LinearLayout>
+        <!-- ======================================================== -->
+    </LinearLayout>
+</ScrollView>

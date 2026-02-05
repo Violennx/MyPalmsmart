@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#f6f8f6"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header -->
+        <TextView
+            android:id="@+id/tvWelcome"
+            android:text="Team Overview"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#112112"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Mandor -->
+        <TextView
+            android:text="Mandor Panen"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#15931b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:text="M. Hafiz Mailano"
+            android:textSize="16sp"
+            android:textColor="#333333"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Anggota Tim -->
+        <TextView
+            android:text="Anggota Tim"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#15931b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Card: Rafli -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#ffffff"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp">
+
+            <TextView
+                android:text="M. Rafli Ardiyaksa. R"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Pemanen"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Card: Sajidur -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#ffffff"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp">
+
+            <TextView
+                android:text="Sajidur Rahman Toyib"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Pemanen"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Card: Rozha -->
+        <LinearLayout
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:background="#ffffff"
+            android:layout_marginBottom="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="2dp">
+
+            <TextView
+                android:text="Muhammad Rozha Ramadhan R"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#112112"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:text="Pemanen"
+                android:textSize="14sp"
+                android:textColor="#777777"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <!-- Tombol Navigasi Bawah -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_gravity="bottom"
+            android:background="#ffffff"
+            android:padding="8dp"
+            android:weightSum="3"
+            android:elevation="4dp">
+
+            <Button
+                android:id="@+id/btnReport"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="4dp"
+                android:layout_weight="1"
+                android:background="#15931b"
+                android:text="Buat Laporan"
+                android:textColor="#ffffff"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/btnProfile"
+                android:text="Profil"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="#15931b"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
